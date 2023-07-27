@@ -47,16 +47,16 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 fieldset {
     display: flex;
     gap: 5px;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    height: 30%;
+    height: 100%;
     width: 30rem;
     padding: 20px;
     border-radius: 5px;
@@ -69,3 +69,60 @@ fieldset {
     padding: 3rem;
 }
 
+input[type=number] {
+    width: 3em;
+	padding: 0.5em;
+	border: .2em solid #aa4401;
+	border-radius: 1em;
+	text-align: center;
+	color: #aa4401;
+	appearance: textfield;
+	margin: 0;
+	&::-webkit-inner-spin-button {
+		opacity: 1;
+		background: red;
+}
+}
+
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10 30px 10 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    line-height: 20px;
+    height: 20px;
+    box-shadow: inset 1px 1px 1px 0px #aa450179;
+    background: #fff;
+    text-indent: 5px;
+
+    min-width: 200px;
+    margin: 0 5px 5px 0;
+  }
+
+
+  @media (max-width:768px) {
+
+    .titulo {
+    font-size:2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+    fieldset {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100%;
+    width: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #aa450179;
+    
+}
+  }

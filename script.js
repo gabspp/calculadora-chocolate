@@ -9,7 +9,7 @@ let totalManteigaCacau;
 
 const aoLeite = 5;
 const amargo = 15;
-const manteigaCacau = Math.round(((aoLeite + amargo) / 100) * 1.5);
+const manteigaCacau = ((aoLeite + amargo) / 100) * 1.5;
 
 quantidadePaes.addEventListener("change", function () { // aqui o evento 'change' é ativado somente quando o caixa de texto perde o foco e o valor foi mudado, diferente do evento onde ele é disparado automaticamente sempre que o evento muda. no nosso caso nao teria muita diferença por que o calculo final só é mostrado depois que o botão de enviar é clicado. 
   quantidadeFormas.value = this.value / 49;
@@ -37,7 +37,7 @@ button.addEventListener("click", () => {
     totalChocolate = quantidadeArredondada * (aoLeite + amargo);
     totalaoLeite = quantidadeArredondada * aoLeite;
     totalAmargo = quantidadeArredondada * amargo;
-    totalManteigaCacau = quantidadeArredondada * manteigaCacau;
+    totalManteigaCacau = Math.round(quantidadeArredondada * manteigaCacau);
 
     document.querySelector(
       ".ao-leite"

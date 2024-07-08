@@ -37,7 +37,7 @@ button.addEventListener("click", () => {
     totalChocolate = quantidadeArredondada * (aoLeite + amargo);
     totalaoLeite = quantidadeArredondada * aoLeite;
     totalAmargo = quantidadeArredondada * amargo;
-    totalManteigaCacau = Math.round(quantidadeArredondada * manteigaCacau);
+    totalManteigaCacau = (quantidadeArredondada * manteigaCacau).toFixed(2);
 
     document.querySelector(
       ".ao-leite"
